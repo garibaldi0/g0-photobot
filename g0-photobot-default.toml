@@ -1,0 +1,9 @@
+appkey = "abcdefghijklmno"
+appsec = "pqrstuvwxyz0123"
+logfile = "/home/user1/go/logs/mhoc-photobot.log"
+destdir = "/My-Shared-Photos"
+
+[tokens]
+user1 = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz012345678901"
+user2 = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz012345678901"
+user3 = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz012345678901"

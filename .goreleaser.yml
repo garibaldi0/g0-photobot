@@ -1,0 +1,29 @@
+# .goreleaser.yml
+# GPG Signing
+sign:
+  signature: "${artifact}.asc"
+  args: ["--armor", "--output", "${signature}", "--detach-sign", "${artifact}"]
+  artifacts: checksum
+# Build customization
+project_name: g0-photobot
+builds:
+  - binary: g0-photobot
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - 386
+      - arm
+      - arm64
+    goarm:
+      - 6
+      - 7
+    ignore:
+      - goos: darwin
+        goarch: 386
+# Archive customization
+archive:
+  format: binary
+  name_template: "{{ .Binary }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}"
